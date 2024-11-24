@@ -22,8 +22,14 @@ public class ChangeAnimal : MonoBehaviour
     // Reference to the panel that contains name and description
     public GameObject panelAnimalInfo;
 
+    // Array for animal sounds
+    public AudioClip[] animalSounds;
+    private AudioSource audioSource;
+
     void Start()
     {
+        audioSource = GetComponent<AudioSource>();
+
         UpdateAnimalInfo();
         panelAnimalInfo.SetActive(false); // Initially hide the panel
     }
@@ -48,7 +54,7 @@ public class ChangeAnimal : MonoBehaviour
 
         objects[indexObject].SetActive(true);
 
-        // Update the displayed animal name and description
+        // Update the displayed animal name, description, and sound
         UpdateAnimalInfo();
     }
 
@@ -67,21 +73,28 @@ public class ChangeAnimal : MonoBehaviour
 
         objects[indexObject].SetActive(true);
 
-        // Update the displayed animal name and description
+        // Update the displayed animal name, description, and sound
         UpdateAnimalInfo();
     }
 
-    // Method to update the animal name and description based on the active object
+    // Method to update the animal name, description, and play sound
     private void UpdateAnimalInfo()
     {
         if (indexObject >= 0 && indexObject < animalNames.Length)
         {
             animalNameText.text = animalNames[indexObject];
             animalDescriptionText.text = animalDescriptions[indexObject];
+
+            // Play the corresponding animal sound
+            if (indexObject >= 0 && indexObject < animalSounds.Length && animalSounds[indexObject] != null)
+            {
+                audioSource.clip = animalSounds[indexObject];
+                audioSource.Play();
+            }
         }
         else
         {
-            Debug.LogWarning("Index out of range for animal names or descriptions.");
+            Debug.LogWarning("Index out of range for animal names, descriptions, or sounds.");
         }
     }
 
@@ -91,6 +104,13 @@ public class ChangeAnimal : MonoBehaviour
         panelAnimalInfo.SetActive(true); // Show the panel
         buttonKiri.interactable = true;
         buttonKanan.interactable = true;
+
+        // Play the current animal sound when detected
+        if (indexObject >= 0 && indexObject < animalSounds.Length && animalSounds[indexObject] != null)
+        {
+            audioSource.clip = animalSounds[indexObject];
+            audioSource.Play();
+        }
     }
 
     public void OnTargetLoss()
@@ -99,5 +119,15 @@ public class ChangeAnimal : MonoBehaviour
         panelAnimalInfo.SetActive(false); // Hide the panel
         buttonKiri.interactable = false;
         buttonKanan.interactable = false;
+
+        // Stop playing the sound when marker is lost
+        if (audioSource.isPlaying)
+        {
+            audioSource.Stop();
+        }
+
+        // Clear the text fields
+        animalNameText.text = "";
+        animalDescriptionText.text = "";
     }
 }

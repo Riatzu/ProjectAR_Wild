@@ -612,6 +612,7 @@ MonoBehaviour:
   animalNameText: {fileID: 1027938426}
   animalDescriptionText: {fileID: 1661471420}
   panelAnimalInfo: {fileID: 1553060355}
+  animalSounds: []
 --- !u!4 &895796355
 Transform:
   m_ObjectHideFlags: 0
@@ -785,17 +786,17 @@ RectTransform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1027938423}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 2137743118}
+  m_Father: {fileID: 1553060358}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0.61456215}
   m_AnchorMax: {x: 0.46383336, y: 0.689}
-  m_AnchoredPosition: {x: -0.000030517578, y: -0.56173706}
-  m_SizeDelta: {x: 0.000030518, y: 1.1236}
+  m_AnchoredPosition: {x: 0, y: 183.66554}
+  m_SizeDelta: {x: 0.000030518, y: 67.47502}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &1027938425
 CanvasRenderer:
@@ -1017,7 +1018,9 @@ RectTransform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
-  m_Children: []
+  m_Children:
+  - {fileID: 1027938424}
+  - {fileID: 1661471418}
   m_Father: {fileID: 2137743118}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0.25331375}
@@ -1050,17 +1053,17 @@ RectTransform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1661471417}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 2137743118}
+  m_Father: {fileID: 1553060358}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0.30831382}
   m_AnchorMax: {x: 1, y: 0.61921895}
-  m_AnchoredPosition: {x: 0, y: -3.4339905}
-  m_SizeDelta: {x: 0, y: -8.019989}
+  m_AnchoredPosition: {x: 0, y: 13.203196}
+  m_SizeDelta: {x: 0, y: 269.1105}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &1661471419
 CanvasRenderer:
@@ -1471,8 +1474,6 @@ RectTransform:
   - {fileID: 1790128970}
   - {fileID: 909158144}
   - {fileID: 1553060358}
-  - {fileID: 1027938424}
-  - {fileID: 1661471418}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
