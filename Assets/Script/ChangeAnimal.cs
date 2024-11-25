@@ -8,6 +8,7 @@ public class ChangeAnimal : MonoBehaviour
 {
     public Button buttonKiri; // Tombol untuk berpindah ke kiri
     public Button buttonKanan; // Tombol untuk berpindah ke kanan
+    public Button buttonSound; // Tombol untuk memainkan suara hewan
     public GameObject[] objects;
     public int indexObject;
 
@@ -30,13 +31,11 @@ public class ChangeAnimal : MonoBehaviour
     {
         audioSource = GetComponent<AudioSource>();
 
+        // Assign button click listener
+        buttonSound.onClick.AddListener(PlayAnimalSound);
+
         UpdateAnimalInfo();
         panelAnimalInfo.SetActive(false); // Initially hide the panel
-    }
-
-    void Update()
-    {
-        // Optional update if needed
     }
 
     public void ButtonKiri()
@@ -104,6 +103,7 @@ public class ChangeAnimal : MonoBehaviour
         panelAnimalInfo.SetActive(true); // Show the panel
         buttonKiri.interactable = true;
         buttonKanan.interactable = true;
+        buttonSound.interactable = true;
 
         // Play the current animal sound when detected
         if (indexObject >= 0 && indexObject < animalSounds.Length && animalSounds[indexObject] != null)
@@ -119,6 +119,7 @@ public class ChangeAnimal : MonoBehaviour
         panelAnimalInfo.SetActive(false); // Hide the panel
         buttonKiri.interactable = false;
         buttonKanan.interactable = false;
+        buttonSound.interactable = false;
 
         // Stop playing the sound when marker is lost
         if (audioSource.isPlaying)
@@ -129,5 +130,19 @@ public class ChangeAnimal : MonoBehaviour
         // Clear the text fields
         animalNameText.text = "";
         animalDescriptionText.text = "";
+    }
+
+    // Method to play animal sound on button click
+    private void PlayAnimalSound()
+    {
+        if (indexObject >= 0 && indexObject < animalSounds.Length && animalSounds[indexObject] != null)
+        {
+            audioSource.clip = animalSounds[indexObject];
+            audioSource.Play();
+        }
+        else
+        {
+            Debug.LogWarning("No sound available for the current animal.");
+        }
     }
 }
