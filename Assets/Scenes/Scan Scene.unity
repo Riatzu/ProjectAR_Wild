@@ -376,10 +376,10 @@ RectTransform:
   - {fileID: 1689017151}
   m_Father: {fileID: 2137743118}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.26661113, y: 0.20078105}
-  m_AnchorMax: {x: 0.71800005, y: 0.31}
-  m_AnchoredPosition: {x: 5.5399933, y: 34.606995}
-  m_SizeDelta: {x: -187.92, y: -72.232}
+  m_AnchorMin: {x: 0.26661113, y: 0.171}
+  m_AnchorMax: {x: 0.7254074, y: 0.31}
+  m_AnchoredPosition: {x: 18, y: -18.49997}
+  m_SizeDelta: {x: -195.92, y: -129.232}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &707159755
 MonoBehaviour:
@@ -871,10 +871,10 @@ RectTransform:
   - {fileID: 755246772}
   m_Father: {fileID: 2137743118}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.037777778, y: 0.21168625}
-  m_AnchorMax: {x: 0.5, y: 0.34300002}
-  m_AnchoredPosition: {x: -12, y: 5.920044}
-  m_SizeDelta: {x: -195.72, y: -98.699005}
+  m_AnchorMin: {x: 0, y: 0.171}
+  m_AnchorMax: {x: 0.38729632, y: 0.29147932}
+  m_AnchoredPosition: {x: -21, y: 4}
+  m_SizeDelta: {x: -115.72, y: -77.699005}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &909158145
 MonoBehaviour:
@@ -1004,7 +1004,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0.61456215}
   m_AnchorMax: {x: 0.46383336, y: 0.689}
-  m_AnchoredPosition: {x: -101, y: 183.66554}
+  m_AnchoredPosition: {x: -101, y: 359}
   m_SizeDelta: {x: 0.000030518, y: 67.47502}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &1027938425
@@ -1516,10 +1516,10 @@ RectTransform:
   - {fileID: 810511715}
   m_Father: {fileID: 2137743118}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.21168625}
-  m_AnchorMax: {x: 0.9441667, y: 0.34300002}
-  m_AnchoredPosition: {x: 9.5, y: 6.5}
-  m_SizeDelta: {x: -183.513, y: -97.821}
+  m_AnchorMin: {x: 0.55925924, y: 0.15900001}
+  m_AnchorMax: {x: 1, y: 0.31}
+  m_AnchoredPosition: {x: 68, y: -5}
+  m_SizeDelta: {x: -179.513, y: -134.821}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1790128971
 MonoBehaviour:
@@ -1890,7 +1890,7 @@ MonoBehaviour:
   m_UiScaleMode: 1
   m_ReferencePixelsPerUnit: 100
   m_ScaleFactor: 1
-  m_ReferenceResolution: {x: 720, y: 1280}
+  m_ReferenceResolution: {x: 1080, y: 1920}
   m_ScreenMatchMode: 0
   m_MatchWidthOrHeight: 0
   m_PhysicalUnit: 3
