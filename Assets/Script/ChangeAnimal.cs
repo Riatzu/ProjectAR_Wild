@@ -1,7 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.EventSystems;
 using UnityEngine.UI;
 
 public class ChangeAnimal : MonoBehaviour
@@ -12,18 +11,16 @@ public class ChangeAnimal : MonoBehaviour
     public GameObject[] objects;
     public int indexObject;
 
-    // Array of animal names and descriptions
-    public string[] animalNames;
-    public string[] animalDescriptions;
+    // Array untuk gambar UI hewan
+    public Sprite[] animalImages;
 
-    // Reference to UI Text elements
-    public Text animalNameText;
-    public Text animalDescriptionText;
+    // Reference ke komponen UI Image
+    public Image animalImageUI;
 
-    // Reference to the panel that contains name and description
+    // Panel informasi hewan
     public GameObject panelAnimalInfo;
 
-    // Array for animal sounds
+    // Array untuk suara hewan
     public AudioClip[] animalSounds;
     private AudioSource audioSource;
 
@@ -35,7 +32,7 @@ public class ChangeAnimal : MonoBehaviour
         buttonSound.onClick.AddListener(PlayAnimalSound);
 
         UpdateAnimalInfo();
-        panelAnimalInfo.SetActive(false); // Initially hide the panel
+        panelAnimalInfo.SetActive(false); // Sembunyikan panel pada awalnya
     }
 
     public void ButtonKiri()
@@ -53,7 +50,7 @@ public class ChangeAnimal : MonoBehaviour
 
         objects[indexObject].SetActive(true);
 
-        // Update the displayed animal name, description, and sound
+        // Update informasi hewan
         UpdateAnimalInfo();
     }
 
@@ -72,19 +69,19 @@ public class ChangeAnimal : MonoBehaviour
 
         objects[indexObject].SetActive(true);
 
-        // Update the displayed animal name, description, and sound
+        // Update informasi hewan
         UpdateAnimalInfo();
     }
 
-    // Method to update the animal name, description, and play sound
+    // Method untuk mengupdate gambar dan suara hewan
     private void UpdateAnimalInfo()
     {
-        if (indexObject >= 0 && indexObject < animalNames.Length)
+        if (indexObject >= 0 && indexObject < animalImages.Length)
         {
-            animalNameText.text = animalNames[indexObject];
-            animalDescriptionText.text = animalDescriptions[indexObject];
+            // Update gambar UI
+            animalImageUI.sprite = animalImages[indexObject];
 
-            // Play the corresponding animal sound
+            // Mainkan suara hewan jika ada
             if (indexObject >= 0 && indexObject < animalSounds.Length && animalSounds[indexObject] != null)
             {
                 audioSource.clip = animalSounds[indexObject];
@@ -93,19 +90,19 @@ public class ChangeAnimal : MonoBehaviour
         }
         else
         {
-            Debug.LogWarning("Index out of range for animal names, descriptions, or sounds.");
+            Debug.LogWarning("Index out of range untuk gambar atau suara hewan.");
         }
     }
 
     public void OnTargetAnimal()
     {
-        // Show panel and enable buttons when the marker is detected
-        panelAnimalInfo.SetActive(true); // Show the panel
+        // Tampilkan panel dan aktifkan tombol saat marker terdeteksi
+        panelAnimalInfo.SetActive(true);
         buttonKiri.interactable = true;
         buttonKanan.interactable = true;
         buttonSound.interactable = true;
 
-        // Play the current animal sound when detected
+        // Mainkan suara hewan saat terdeteksi
         if (indexObject >= 0 && indexObject < animalSounds.Length && animalSounds[indexObject] != null)
         {
             audioSource.clip = animalSounds[indexObject];
@@ -115,24 +112,23 @@ public class ChangeAnimal : MonoBehaviour
 
     public void OnTargetLoss()
     {
-        // Hide panel and disable buttons when the marker is lost
-        panelAnimalInfo.SetActive(false); // Hide the panel
+        // Sembunyikan panel dan nonaktifkan tombol saat marker hilang
+        panelAnimalInfo.SetActive(false);
         buttonKiri.interactable = false;
         buttonKanan.interactable = false;
         buttonSound.interactable = false;
 
-        // Stop playing the sound when marker is lost
+        // Hentikan suara saat marker hilang
         if (audioSource.isPlaying)
         {
             audioSource.Stop();
         }
 
-        // Clear the text fields
-        animalNameText.text = "";
-        animalDescriptionText.text = "";
+        // Hapus gambar dari UI
+        animalImageUI.sprite = null;
     }
 
-    // Method to play animal sound on button click
+    // Method untuk memainkan suara hewan saat tombol diklik
     private void PlayAnimalSound()
     {
         if (indexObject >= 0 && indexObject < animalSounds.Length && animalSounds[indexObject] != null)
@@ -142,7 +138,7 @@ public class ChangeAnimal : MonoBehaviour
         }
         else
         {
-            Debug.LogWarning("No sound available for the current animal.");
+            Debug.LogWarning("Tidak ada suara untuk hewan saat ini.");
         }
     }
 }
