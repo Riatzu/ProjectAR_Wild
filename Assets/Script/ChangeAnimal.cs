@@ -35,6 +35,11 @@ public class ChangeAnimal : MonoBehaviour
         panelAnimalInfo.SetActive(false); // Sembunyikan panel pada awalnya
     }
 
+    void Update()
+    {
+        RotateObject(); // Panggil rotasi setiap frame
+    }
+
     public void ButtonKiri()
     {
         Debug.Log("Kiri");
@@ -139,6 +144,15 @@ public class ChangeAnimal : MonoBehaviour
         else
         {
             Debug.LogWarning("Tidak ada suara untuk hewan saat ini.");
+        }
+    }
+
+    // Method untuk merotasi objek di sepanjang sumbu Z
+    private void RotateObject()
+    {
+        if (objects[indexObject] != null)
+        {
+            objects[indexObject].transform.Rotate(Vector3.down * 15 * Time.deltaTime);
         }
     }
 }
