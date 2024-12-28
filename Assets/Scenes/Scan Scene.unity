@@ -1294,15 +1294,15 @@ Transform:
   m_Children:
   - {fileID: 711011220}
   - {fileID: 640670826}
-  - {fileID: 42366473}
   - {fileID: 1189617098}
   - {fileID: 1951698359}
   - {fileID: 749803415}
-  - {fileID: 1663365574}
   - {fileID: 1992739881}
   - {fileID: 1644013311}
-  - {fileID: 1267050486}
   - {fileID: 1672720407}
+  - {fileID: 42366473}
+  - {fileID: 1267050486}
+  - {fileID: 1663365574}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: -55.895, y: 0, z: 0}
 --- !u!114 &835229063
@@ -1336,6 +1336,7 @@ GameObject:
   - component: {fileID: 895796354}
   - component: {fileID: 895796357}
   - component: {fileID: 895796356}
+  - component: {fileID: 895796358}
   m_Layer: 0
   m_Name: GameManager
   m_TagString: Untagged
@@ -1361,20 +1362,28 @@ MonoBehaviour:
   objects:
   - {fileID: 711011221}
   - {fileID: 640670827}
-  - {fileID: 42366474}
   - {fileID: 1189617099}
   - {fileID: 1951698360}
   - {fileID: 749803416}
-  - {fileID: 1663365575}
   - {fileID: 1992739880}
   - {fileID: 1644013312}
-  - {fileID: 1267050487}
   - {fileID: 1672720406}
+  - {fileID: 42366474}
+  - {fileID: 1267050487}
+  - {fileID: 1663365575}
   indexObject: 0
   animalImages: []
   animalImageUI: {fileID: 1553060356}
   panelAnimalInfo: {fileID: 1553060355}
-  animalSounds: []
+  animalSounds:
+  - {fileID: 8300000, guid: b4240499cad532a4489c88bd6cefdcdb, type: 3}
+  - {fileID: 8300000, guid: 128471675438e7a488a9a2ee86317ed7, type: 3}
+  - {fileID: 8300000, guid: 7d556b82db77ae14d91bfa24b1930a9f, type: 3}
+  - {fileID: 8300000, guid: c3b9acdca0033b3499a748ffe7e56938, type: 3}
+  - {fileID: 8300000, guid: 1d98964c0a9962c4f9ec22a90d6af598, type: 3}
+  - {fileID: 8300000, guid: 7ddd706e3b15f3b4095e1b0cc11267cb, type: 3}
+  - {fileID: 8300000, guid: cf0411ba066b8aa43bb13f6514f1c833, type: 3}
+  - {fileID: 8300000, guid: fbaeacf727f76e1479d712ffef11d223, type: 3}
 --- !u!4 &895796355
 Transform:
   m_ObjectHideFlags: 0
@@ -1432,6 +1441,102 @@ MonoBehaviour:
   recordFingers: 1
   recordThreshold: 5
   recordLimit: 10
+--- !u!82 &895796358
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 895796353}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 0}
+  m_audioClip: {fileID: 0}
+  m_PlayOnAwake: 1
+  m_Volume: 1
+  m_Pitch: 1
+  Loop: 0
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
 --- !u!1 &909158143
 GameObject:
   m_ObjectHideFlags: 0
@@ -3046,6 +3151,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: elepantho
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 1d1008cc48d0a214dbac123515cd389c,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8743813690021804245, guid: 1d1008cc48d0a214dbac123515cd389c,
         type: 3}
