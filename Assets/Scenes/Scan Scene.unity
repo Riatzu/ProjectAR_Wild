@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.44402242, g: 0.49316543, b: 0.5722324, a: 1}
+  m_IndirectSpecularColor: {r: 0.44657898, g: 0.4964133, b: 0.5748178, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -1372,7 +1372,16 @@ MonoBehaviour:
   - {fileID: 1267050487}
   indexObject: 0
   animalImages:
-  - {fileID: 21300000, guid: 042d6471561563d4a93a893fac828fd5, type: 3}
+  - {fileID: 21300000, guid: d67090958ee94b54facdb5306f4e1896, type: 3}
+  - {fileID: 21300000, guid: b774f7b1a2c07e4448690f49d02fa63e, type: 3}
+  - {fileID: 21300000, guid: cf274ada433b7c64d8281694f66dcecc, type: 3}
+  - {fileID: 21300000, guid: 7bb37a73a00ab1d45b642761f9bd0786, type: 3}
+  - {fileID: 21300000, guid: 4899097e99a2b09478cd4255523079a7, type: 3}
+  - {fileID: 21300000, guid: a3006dbf52da1824e8800a79b4e9b847, type: 3}
+  - {fileID: 21300000, guid: 2ba142c9b615dcb44ae0d21156bb50e7, type: 3}
+  - {fileID: 21300000, guid: be27fdbdc6b3c0e49b11d5dea6757727, type: 3}
+  - {fileID: 21300000, guid: 856ec0668ea60044c92ad8b0b9df292f, type: 3}
+  - {fileID: 21300000, guid: 433f1cd5acb5c8d41ac848080e5d33ea, type: 3}
   animalImageUI: {fileID: 1553060356}
   panelAnimalInfo: {fileID: 1553060355}
   animalSounds:
@@ -1572,8 +1581,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0.40770373, y: 0.24268623}
-  m_AnchoredPosition: {x: 0, y: 782}
-  m_SizeDelta: {x: -137.72, y: -313.699}
+  m_AnchoredPosition: {x: -115.7, y: 695.0944}
+  m_SizeDelta: {x: -68.86, y: -139.888}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &909158145
 MonoBehaviour:
@@ -2298,8 +2307,7 @@ RectTransform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 101.86019, y: 54.795383, z: 3.1304348}
   m_ConstrainProportionsScale: 0
-  m_Children:
-  - {fileID: 2118863181}
+  m_Children: []
   m_Father: {fileID: 1553060358}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
@@ -2642,8 +2650,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0.21772762}
   m_AnchorMax: {x: 1, y: 0.9005621}
-  m_AnchoredPosition: {x: 0, y: -705}
-  m_SizeDelta: {x: 0, y: -724.064}
+  m_AnchoredPosition: {x: 0, y: -113.37}
+  m_SizeDelta: {x: 0, y: 607.95}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1001 &1644013310
 PrefabInstance:
@@ -3441,8 +3449,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5694815, y: 0}
   m_AnchorMax: {x: 1, y: 0.25331375}
-  m_AnchoredPosition: {x: 32, y: 762.92505}
-  m_SizeDelta: {x: -168.513, y: -330.82098}
+  m_AnchoredPosition: {x: 117, y: 684.91}
+  m_SizeDelta: {x: -49.715996, y: -167.524}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1790128971
 MonoBehaviour:
@@ -4107,41 +4115,6 @@ MonoBehaviour:
   damping: -1
   remainingTranslation: {x: 0, y: 0, z: 0}
   remainingRotation: {x: 0, y: 0, z: 0, w: 1}
---- !u!1 &2118863180
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 2118863181}
-  m_Layer: 0
-  m_Name: Keterangan
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!224 &2118863181
-RectTransform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2118863180}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 1275709817}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0.036197, y: -0.05}
-  m_SizeDelta: {x: 10.558424, y: 10.8}
-  m_Pivot: {x: 0.50000006, y: 0.49999997}
 --- !u!1 &2137743114
 GameObject:
   m_ObjectHideFlags: 0
@@ -4254,9 +4227,9 @@ SceneRoots:
   m_Roots:
   - {fileID: 147729045}
   - {fileID: 1943103907}
-  - {fileID: 2137743118}
   - {fileID: 1445009690}
   - {fileID: 835229062}
   - {fileID: 895796355}
   - {fileID: 1095299515}
   - {fileID: 1005137165}
+  - {fileID: 2137743118}
