@@ -30,9 +30,17 @@ public class ChangeAnimal : MonoBehaviour
 
         // Assign button click listener
         buttonSound.onClick.AddListener(PlayAnimalSound);
+        buttonKiri.onClick.AddListener(() => StopAnimalSound());
+        buttonKanan.onClick.AddListener(() => StopAnimalSound());
 
         UpdateAnimalInfo();
         panelAnimalInfo.SetActive(false); // Sembunyikan panel pada awalnya
+
+        // Pastikan suara tidak aktif saat game dimulai
+        if (audioSource.isPlaying)
+        {
+            audioSource.Stop();
+        }
     }
 
     void Update()
@@ -85,17 +93,10 @@ public class ChangeAnimal : MonoBehaviour
         {
             // Update gambar UI
             animalImageUI.sprite = animalImages[indexObject];
-
-            // Mainkan suara hewan jika ada
-            if (indexObject >= 0 && indexObject < animalSounds.Length && animalSounds[indexObject] != null)
-            {
-                audioSource.clip = animalSounds[indexObject];
-                audioSource.Play();
-            }
         }
         else
         {
-            Debug.LogWarning("Index out of range untuk gambar atau suara hewan.");
+            Debug.LogWarning("Index out of range untuk gambar hewan.");
         }
     }
 
@@ -106,13 +107,6 @@ public class ChangeAnimal : MonoBehaviour
         buttonKiri.interactable = true;
         buttonKanan.interactable = true;
         buttonSound.interactable = true;
-
-        // Mainkan suara hewan saat terdeteksi
-        if (indexObject >= 0 && indexObject < animalSounds.Length && animalSounds[indexObject] != null)
-        {
-            audioSource.clip = animalSounds[indexObject];
-            audioSource.Play();
-        }
     }
 
     public void OnTargetLoss()
@@ -124,10 +118,7 @@ public class ChangeAnimal : MonoBehaviour
         buttonSound.interactable = false;
 
         // Hentikan suara saat marker hilang
-        if (audioSource.isPlaying)
-        {
-            audioSource.Stop();
-        }
+        StopAnimalSound();
 
         // Hapus gambar dari UI
         animalImageUI.sprite = null;
@@ -144,6 +135,15 @@ public class ChangeAnimal : MonoBehaviour
         else
         {
             Debug.LogWarning("Tidak ada suara untuk hewan saat ini.");
+        }
+    }
+
+    // Method untuk menghentikan suara hewan
+    private void StopAnimalSound()
+    {
+        if (audioSource.isPlaying)
+        {
+            audioSource.Stop();
         }
     }
 

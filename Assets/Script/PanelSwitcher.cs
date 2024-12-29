@@ -12,6 +12,9 @@ public class PanelSwitcher : MonoBehaviour
 
     private GameObject activePanel; // Panel yang sedang aktif
 
+    [Header("Sound Manager")]
+    public SoundManager soundManager; // Referensi ke SoundManager
+
     void Start()
     {
         // Inisialisasi semua panel dalam parent
@@ -48,6 +51,12 @@ public class PanelSwitcher : MonoBehaviour
 
             activePanel = panels[panelName];
             activePanel.SetActive(true); // Aktifkan panel baru
+
+            // Hentikan sound saat panel berubah
+            if (soundManager != null && soundManager.audioSource.isPlaying)
+            {
+                soundManager.audioSource.Stop();
+            }
         }
         else
         {

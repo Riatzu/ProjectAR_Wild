@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class AudioManager : MonoBehaviour
+public class SoundManager : MonoBehaviour
 {
     [Header("Audio Source")]
     public AudioSource audioSource; // Komponen AudioSource untuk memutar suara
